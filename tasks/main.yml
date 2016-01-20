@@ -1,0 +1,11 @@
+---
+- name: Install bootstrap packages.
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - python
+    - python-apt
+    - python-pycurl
+    - aptitude
